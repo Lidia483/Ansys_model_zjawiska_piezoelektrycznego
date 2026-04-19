@@ -1,0 +1,84 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+template1 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+system1.Delete()
+template2 = GetTemplate(TemplateName="Geometry")
+system2 = template2.CreateSystem()
+geometry1 = system2.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.Edit(IsDiscoveryGeometry=True)
+geometry1.Exit()
+geometry1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+system3 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+system3.Delete()
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+system4 = template1.CreateSystem(
+    ComponentsToShare=[geometryComponent1],
+    Position="Right",
+    RelativeTo=system2)
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="Piezoelectric Materials",
+    Source="Piezoelectric_Materials.xml")
+engineeringData1 = system4.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="PZT-5H",
+    Source="Piezoelectric_Materials.xml")
+library2 = EngData.OpenLibrary(
+    Name="ANSYS GRANTA Materials Data for Simulation (Sample)",
+    Source="Granta_Design_Typical_Materials.xml")
+library3 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+library4 = EngData.OpenLibrary(
+    Name="Additive Manufacturing Materials",
+    Source="Additive_Manufacturing_Materials.xml")
+matl2 = engineeringData1.ImportMaterial(
+    Name="Brass, C37700",
+    Source="Granta_Design_Typical_Materials.xml")
+EngData.EnableFilter(Enable=False)
+modelComponent1 = system4.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system4.GetContainer(ComponentName="Model")
+model1.Edit()
+template3 = GetTemplate(
+    TemplateName="Harmonic Response",
+    Solver="ANSYS")
+system5 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system4)
+system5.Delete()
+engineeringDataComponent1 = system4.GetComponent(Name="Engineering Data")
+geometryComponent2 = system4.GetComponent(Name="Geometry")
+system6 = template1.CreateSystem(
+    ComponentsToShare=[engineeringDataComponent1, geometryComponent2, modelComponent1],
+    Position="Right",
+    RelativeTo=system4)
+Update()
+system7 = template3.CreateSystem(
+    ComponentsToShare=[engineeringDataComponent1, geometryComponent2, modelComponent1],
+    Position="Right",
+    RelativeTo=system4)
+model1.Exit()
+geometry1.Edit()
+Save(Overwrite=True)
+modelComponent1.Refresh()
+model1.Edit()
+Update()
+geometry1.Exit()
+geometry1.Edit()
+Update()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Update()
+Save(Overwrite=True)
+Save(Overwrite=True)

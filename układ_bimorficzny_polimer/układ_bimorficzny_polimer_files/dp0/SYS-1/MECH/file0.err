@@ -1,0 +1,44 @@
+/COM,ANSYS RELEASE 2025 R2           BUILD 25.2      UP20250519       17:29:16
+
+ *** WARNING ***                         CP =       0.281   TIME= 17:29:16
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.344   TIME= 17:29:16
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.531   TIME= 17:29:16
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       1.594   TIME= 17:29:17
+ Fewer modes than the requested number of modes ( 200 ) were computed.   
+ The range specified (FREQB= 0, FREQE= 50) contains only 1 modes.        
+
+ *** WARNING ***                         CP =       1.641   TIME= 17:29:17
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       2.141   TIME= 17:29:17
+ To avoid duplication when using the LVSCALE command, delete all loads   
+ unless already deleted.                                                 
+
+ *** WARNING ***                         CP =       2.266   TIME= 17:29:17
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       2.266   TIME= 17:29:17
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       2.453   TIME= 17:29:17
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       3.203   TIME= 17:29:17
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           

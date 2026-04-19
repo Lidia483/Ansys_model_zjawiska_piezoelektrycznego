@@ -1,0 +1,75 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+system1 = GetSystem(Name="Geom")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometry1.Exit()
+Update()
+system2 = GetSystem(Name="SYS")
+model1 = system2.GetContainer(ComponentName="Model")
+model1.Edit()
+geometry1.Edit()
+Save(Overwrite=True)
+geometry1.Exit()
+modelComponent1 = system2.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1.Edit()
+engineeringData1 = system2.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="polimer")
+matl1 = material1.Duplicate(TargetContainer=engineeringData1)
+matlProp1 = matl1.GetProperty(Name="Piezoelectric Matrix")
+matlProp1.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Variables=["e[*,5]"],
+    Values=[["-12 [A s m^-2]"]])
+matlProp1.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Index=2,
+    Variables=["e[*,3]"],
+    Values=[["-33 [A s m^-2]"]])
+matlProp1.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Index=2,
+    Variables=["e[*,1]"],
+    Values=[["23 [A s m^-2]"]])
+modelComponent1.Refresh()
+model1.Edit()
+Save(Overwrite=True)
+model1.Exit()
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="Piezoelectric Materials",
+    Source="Piezoelectric_Materials.xml")
+Save(Overwrite=True)
+matl2 = engineeringData1.ImportMaterial(
+    Name="PZT-5H",
+    Source="Piezoelectric_Materials.xml")
+EngData.EnableFilter(Enable=False)
+matlProp2 = matl2.GetProperty(Name="Piezoelectric Matrix")
+matlProp2.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Index=2,
+    Variables=["e[*,1]"],
+    Values=[["6.5 [A s m^-2]"]])
+matlProp2.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Index=2,
+    Variables=["e[*,3]"],
+    Values=[["-23.3 [A s m^-2]"]])
+matlProp2.SetData(
+    SheetName="Piezoelectric Matrix",
+    SheetQualifiers={"Definition": "", "Behavior": "", "Table": "Stress", "Active Table": "Stress", "Format": "IEEE", "Point Group": "6mm"},
+    Variables=["e[*,5]"],
+    Values=[["-17 [A s m^-2]"]])
+modelComponent1.Refresh()
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)

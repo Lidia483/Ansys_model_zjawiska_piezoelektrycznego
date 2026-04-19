@@ -1,0 +1,85 @@
+/COM,ANSYS RELEASE 2025 R2           BUILD 25.2      UP20250519       17:40:37
+
+ *** WARNING ***                         CP =       0.547   TIME= 17:40:38
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.547   TIME= 17:40:38
+ Element 109 (SOLID226) references undefined PERX or DPER for material   
+ 2.                                                                      
+
+ *** WARNING ***                         CP =       0.547   TIME= 17:40:38
+ Element 380 (SOLID226) references undefined PERX or DPER for material   
+ 4.                                                                      
+
+ *** WARNING ***                         CP =       0.547   TIME= 17:40:38
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 109 (SOLID226) references undefined PERX or DPER for material   
+ 2.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 380 (SOLID226) references undefined PERX or DPER for material   
+ 4.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 109 (SOLID226) references undefined PERX or DPER for material   
+ 2.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 109 (SOLID226) references undefined PERX or DPER for material   
+ 2.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 380 (SOLID226) references undefined PERX or DPER for material   
+ 4.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Element 380 (SOLID226) references undefined PERX or DPER for material   
+ 4.                                                                      
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Material number 11 (used by element 2444) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       0.734   TIME= 17:40:38
+ Maximum contact stiffness 2.46E+16 is too big which can cause an        
+ accuracy problem, you may scale the force units in the model.           
